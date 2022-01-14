@@ -1,0 +1,15 @@
+<div class="col-12 col-sm-6">
+    <div class="form-group">
+        <select class="form-control" id="status" name="status" hidden>
+            <!-- <option hidden>Status</option> -->
+            <?php while($row_status = mysqli_fetch_assoc($result_status)) :?>
+            <option value="<?php echo $row_status[" status_id"]; ?>">
+                <?php echo $row_status["status"]; ?>
+            </option>
+            <?php endwhile; ?>
+        </select>
+    </div>
+</div>
+<div class="col-12">
+    <input type="submit" name="applyfor" class="btn btn-primary" id="submit" value="Submit">
+</div>
